@@ -1,0 +1,71 @@
+name: build
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - stable/**
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      packages: write
+    steps:
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
+        with:
+          repository: openstack/requirements
+          ref: 46a7e3927152884c05f1e257c528af593d67b84d
+
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
+        with:
+          repository: openstack/tempest
+          ref: 538f6af8da510e9286ddc762182cfa7170ad7b03
+
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
+        with:
+          repository: openstack/barbican-tempest-plugin
+          ref: 2cd185133a86242c58d721e66c2db753a369fe60
+
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
+        with:
+          repository: openstack/cinder-tempest-plugin
+          ref: 1357d5dccffc2cd6c1e8a13e84c065d5bd55e4d5
+
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
+        with:
+          repository: openstack/heat-tempest-plugin
+          ref: 1ce78d2eba96678955e3be10096fc239b08ba809
+
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
+        with:
+          repository: openstack/keystone-tempest-plugin
+          ref: bab7165ee8aef4abb796db587299c773bc105ee1
+
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
+        with:
+          repository: openstack/neutron-tempest-plugin
+          ref: 9c22c14682afa1168d0e1bd1cd1efb092c28a8fe
+
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
+        with:
+          repository: openstack/octavia-tempest-plugin
+          ref: 2f3e8a379573dc8c7cb13a5395f55ba00790fe59
+
+      - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
+        with:
+          image-name: tempest
+          build-contexts: |
+            requirements=openstack/requirements
+            tempest=openstack/tempest
+            barbican-tempest-plugin=openstack/barbican-tempest-plugin
+            cinder-tempest-plugin=openstack/cinder-tempest-plugin
+            heat-tempest-plugin=openstack/heat-tempest-plugin
+            keystone-tempest-plugin=openstack/keystone-tempest-plugin
+            neutron-tempest-plugin=openstack/neutron-tempest-plugin
+            octavia-tempest-plugin=openstack/octavia-tempest-plugin
+          push: ${{ github.event_name != 'pull_request' }}

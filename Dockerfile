@@ -18,7 +18,8 @@ RUN \
   --mount=type=bind,from=heat-tempest-plugin,source=/,target=/src/heat-tempest-plugin,readwrite \
   --mount=type=bind,from=keystone-tempest-plugin,source=/,target=/src/keystone-tempest-plugin,readwrite \
   --mount=type=bind,from=neutron-tempest-plugin,source=/,target=/src/neutron-tempest-plugin,readwrite \
-  --mount=type=bind,from=octavia-tempest-plugin,source=/,target=/src/octavia-tempest-plugin,readwrite <<EOF bash -xe
+  --mount=type=bind,from=octavia-tempest-plugin,source=/,target=/src/octavia-tempest-plugin,readwrite \
+  --mount=type=bind,from=ironic-tempest-plugin,source=/,target=/src/ironic-tempest-plugin,readwrite <<EOF bash -xe
 uv pip install \
     --constraint /src/requirements/upper-constraints.txt \
         /src/tempest \
@@ -27,7 +28,8 @@ uv pip install \
         /src/heat-tempest-plugin \
         /src/keystone-tempest-plugin \
         /src/neutron-tempest-plugin \
-        /src/octavia-tempest-plugin
+        /src/octavia-tempest-plugin \
+        /src/ironic-tempest-plugin
 EOF
 
 FROM ghcr.io/vexxhost/python-base:main@sha256:2e16855b7d95781de7396ac2cac3aef32ca5a83079db724e3f97d4e4be322c94

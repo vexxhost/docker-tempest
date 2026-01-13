@@ -57,6 +57,11 @@ jobs:
           repository: openstack/octavia-tempest-plugin
           ref: 2f3e8a379573dc8c7cb13a5395f55ba00790fe59
 
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
+        with:
+          repository: openstack/ironic-tempest-plugin
+          ref: dba9f9555989526bf3d2f51a688f54a80c6d2ffd
+
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
         with:
           image-name: tempest
@@ -69,4 +74,5 @@ jobs:
             keystone-tempest-plugin=openstack/keystone-tempest-plugin
             neutron-tempest-plugin=openstack/neutron-tempest-plugin
             octavia-tempest-plugin=openstack/octavia-tempest-plugin
+            ironic-tempest-plugin=openstack/ironic-tempest-plugin
           push: ${{ github.event_name != 'pull_request' }}

@@ -9,7 +9,7 @@ GO111MODULE=off CGO_ENABLED=0 GOOS=linux go build \
     /src/octavia_tempest_plugin/contrib/test_server/test_server.go
 EOF
 
-FROM ghcr.io/vexxhost/openstack-venv-builder:main@sha256:826c19854827486290b482095128d1c61ffa7b8c4ab282c561b552194014d7e5 AS build
+FROM ghcr.io/vexxhost/openstack-venv-builder:main@sha256:2cc30a82943584f3be408651abe344398fe76b222c24a80a98d8f764faddd6da AS build
 RUN \
   --mount=type=bind,from=requirements,source=/,target=/src/requirements,readwrite \
   --mount=type=bind,from=tempest,source=/,target=/src/tempest,readwrite \

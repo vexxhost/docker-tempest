@@ -30,7 +30,7 @@ uv pip install \
         /src/octavia-tempest-plugin
 EOF
 
-FROM ghcr.io/vexxhost/python-base:main@sha256:b33dd92480af4e936eacd14cce9f391e2dee79addf9f4a01cdd1d7b76940dcf3
+FROM ghcr.io/vexxhost/python-base:main@sha256:061c6e6065fba6dcc68ff923c4ecef52d8c5e93577abceacfaf2289d72b634c1
 RUN \
     groupadd -g 42424 tempest && \
     useradd -u 42424 -g 42424 -M -d /var/lib/tempest -s /usr/sbin/nologin -c "Tempest User" tempest && \

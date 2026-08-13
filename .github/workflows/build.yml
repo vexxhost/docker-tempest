@@ -21,51 +21,51 @@ jobs:
       pull-requests: write
     steps:
       - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920 # v2.20.0
+        uses: step-security/harden-runner@b09bb98e06d4d774595224525879c09bc6e98c40 # v2.20.1
         with:
           egress-policy: audit
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@e22141dfd5b75c4109fab95427441cfa762bc770 # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@70f8dfc6d54fdcfc58940cd93cecced306374ed7 # main
         with:
           repository: openstack/requirements
           ref: 46a7e3927152884c05f1e257c528af593d67b84d
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@e22141dfd5b75c4109fab95427441cfa762bc770 # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@70f8dfc6d54fdcfc58940cd93cecced306374ed7 # main
         with:
           repository: openstack/tempest
           ref: 538f6af8da510e9286ddc762182cfa7170ad7b03
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@e22141dfd5b75c4109fab95427441cfa762bc770 # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@70f8dfc6d54fdcfc58940cd93cecced306374ed7 # main
         with:
           repository: openstack/barbican-tempest-plugin
           ref: 7c5276f0f1087e8565b1ecbf14b23e73398ba25f # master
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@e22141dfd5b75c4109fab95427441cfa762bc770 # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@70f8dfc6d54fdcfc58940cd93cecced306374ed7 # main
         with:
           repository: openstack/cinder-tempest-plugin
           ref: 29bb6f77210404a4b70e4143cd9c3c9912534af7 # master
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@e22141dfd5b75c4109fab95427441cfa762bc770 # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@70f8dfc6d54fdcfc58940cd93cecced306374ed7 # main
         with:
           repository: openstack/heat-tempest-plugin
           ref: c53f251cca7f610b94370d014f32646d9e9070f8 # master
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@e22141dfd5b75c4109fab95427441cfa762bc770 # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@70f8dfc6d54fdcfc58940cd93cecced306374ed7 # main
         with:
           repository: openstack/keystone-tempest-plugin
           ref: c7680f401bb90de5898a0a838793c81e5c463a1e # master
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@e22141dfd5b75c4109fab95427441cfa762bc770 # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@70f8dfc6d54fdcfc58940cd93cecced306374ed7 # main
         with:
           repository: openstack/neutron-tempest-plugin
           ref: 447125e43ca816724b11aefb7ad15e8b27472b14 # master
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@e22141dfd5b75c4109fab95427441cfa762bc770 # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@70f8dfc6d54fdcfc58940cd93cecced306374ed7 # main
         with:
           repository: openstack/octavia-tempest-plugin
           ref: 3d0aefdebb4de7e8ef80821fe8e7ce91a982e92f # master
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/build-image@e22141dfd5b75c4109fab95427441cfa762bc770 # main
+      - uses: vexxhost/docker-atmosphere/.github/actions/build-image@70f8dfc6d54fdcfc58940cd93cecced306374ed7 # main
         with:
           image-name: tempest
           build-contexts: |

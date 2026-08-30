@@ -38,32 +38,32 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@b6113e0668dc85929f783667f0347fc76b272844 # main
         with:
           repository: openstack/barbican-tempest-plugin
-          ref: 2cd185133a86242c58d721e66c2db753a369fe60 # master
+          ref: 7c5276f0f1087e8565b1ecbf14b23e73398ba25f # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@b6113e0668dc85929f783667f0347fc76b272844 # main
         with:
           repository: openstack/cinder-tempest-plugin
-          ref: 1357d5dccffc2cd6c1e8a13e84c065d5bd55e4d5 # master
+          ref: 29bb6f77210404a4b70e4143cd9c3c9912534af7 # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@b6113e0668dc85929f783667f0347fc76b272844 # main
         with:
           repository: openstack/heat-tempest-plugin
-          ref: 1ce78d2eba96678955e3be10096fc239b08ba809 # master
+          ref: c53f251cca7f610b94370d014f32646d9e9070f8 # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@b6113e0668dc85929f783667f0347fc76b272844 # main
         with:
           repository: openstack/keystone-tempest-plugin
-          ref: bab7165ee8aef4abb796db587299c773bc105ee1 # master
+          ref: c7680f401bb90de5898a0a838793c81e5c463a1e # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@b6113e0668dc85929f783667f0347fc76b272844 # main
         with:
           repository: openstack/neutron-tempest-plugin
-          ref: 9c22c14682afa1168d0e1bd1cd1efb092c28a8fe # master
+          ref: 447125e43ca816724b11aefb7ad15e8b27472b14 # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@b6113e0668dc85929f783667f0347fc76b272844 # main
         with:
           repository: openstack/octavia-tempest-plugin
-          ref: 2f3e8a379573dc8c7cb13a5395f55ba00790fe59 # master
+          ref: 3d0aefdebb4de7e8ef80821fe8e7ce91a982e92f # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@b6113e0668dc85929f783667f0347fc76b272844 # main
         with:

@@ -58,7 +58,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@db1fb3032d9f9a0a3ad24819e88c1b82fab4231c # main
         with:
           repository: openstack/neutron-tempest-plugin
-          ref: 9c22c14682afa1168d0e1bd1cd1efb092c28a8fe # master
+          ref: e190b3649745ad36c4d421d29aa7f21caba213b0 # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@db1fb3032d9f9a0a3ad24819e88c1b82fab4231c # main
         with:

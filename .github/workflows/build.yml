@@ -28,7 +28,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@15f30aa3f1fff75915cf230d19e00a54324d6ec7 # main
         with:
           repository: openstack/tempest
-          ref: 538f6af8da510e9286ddc762182cfa7170ad7b03
+          ref: 9831863ccfea824ddf9a8e24e546fa9ec822bc0e # 47.0.0
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@15f30aa3f1fff75915cf230d19e00a54324d6ec7 # main
         with:

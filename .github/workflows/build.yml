@@ -27,11 +27,6 @@ jobs:
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@15f30aa3f1fff75915cf230d19e00a54324d6ec7 # main
         with:
-          repository: openstack/requirements
-          ref: 46a7e3927152884c05f1e257c528af593d67b84d
-
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@15f30aa3f1fff75915cf230d19e00a54324d6ec7 # main
-        with:
           repository: openstack/tempest
           ref: 538f6af8da510e9286ddc762182cfa7170ad7b03
 
@@ -58,7 +53,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@15f30aa3f1fff75915cf230d19e00a54324d6ec7 # main
         with:
           repository: openstack/neutron-tempest-plugin
-          ref: 9c22c14682afa1168d0e1bd1cd1efb092c28a8fe # master
+          ref: e190b3649745ad36c4d421d29aa7f21caba213b0 # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@15f30aa3f1fff75915cf230d19e00a54324d6ec7 # main
         with:
@@ -69,7 +64,6 @@ jobs:
         with:
           image-name: tempest
           build-contexts: |
-            requirements=openstack/requirements
             tempest=openstack/tempest
             barbican-tempest-plugin=openstack/barbican-tempest-plugin
             cinder-tempest-plugin=openstack/cinder-tempest-plugin

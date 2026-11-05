@@ -33,32 +33,32 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: openstack/barbican-tempest-plugin
-          ref: 2cd185133a86242c58d721e66c2db753a369fe60 # master
+          ref: f370cf0ee9e72ada0f48bf80360b7de851444b8e # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: openstack/cinder-tempest-plugin
-          ref: 1357d5dccffc2cd6c1e8a13e84c065d5bd55e4d5 # master
+          ref: d4894b4df9916d5f7b1968a4e3093f40af4eed44 # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: openstack/heat-tempest-plugin
-          ref: 1ce78d2eba96678955e3be10096fc239b08ba809 # master
+          ref: aa06b853940a26199355f8db92298a4b493a47a0 # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: openstack/keystone-tempest-plugin
-          ref: bab7165ee8aef4abb796db587299c773bc105ee1 # master
+          ref: a027c11ac8ce3972f387d5a316cfce16665203bd # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: openstack/neutron-tempest-plugin
-          ref: e190b3649745ad36c4d421d29aa7f21caba213b0 # master
+          ref: 74ae0844d7441b12f93152f366c65e287c79308f # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: openstack/octavia-tempest-plugin
-          ref: 2f3e8a379573dc8c7cb13a5395f55ba00790fe59 # master
+          ref: 15209727e071ed83bbbfe2fe6694c1282215ed33 # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:

@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: © 2025 VEXXHOST, Inc.
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-FROM golang AS octavia-test-server
+FROM golang@sha256:e519d3b0a5b285e5aa53ab9eef02bc6bbb9cb04608389b743a136a9ce75f0d1e AS octavia-test-server
 RUN --mount=type=bind,from=octavia-tempest-plugin,source=/,target=/src <<EOF
 GO111MODULE=off CGO_ENABLED=0 GOOS=linux go build \
     -a -ldflags '-s -w -extldflags -static' \

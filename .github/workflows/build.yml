@@ -43,7 +43,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: openstack/heat-tempest-plugin
-          ref: aa06b853940a26199355f8db92298a4b493a47a0 # master
+          ref: 80a32f85477ab497bd489aa32b05e80755d08b5a # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:

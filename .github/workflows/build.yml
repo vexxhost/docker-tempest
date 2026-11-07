@@ -38,7 +38,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: openstack/cinder-tempest-plugin
-          ref: d4894b4df9916d5f7b1968a4e3093f40af4eed44 # master
+          ref: 34fb7539a7a7c0e9e1632b90ac678a9950a17473 # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:

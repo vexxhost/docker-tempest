@@ -9,7 +9,7 @@ GO111MODULE=off CGO_ENABLED=0 GOOS=linux go build \
     /src/octavia_tempest_plugin/contrib/test_server/test_server.go
 EOF
 
-FROM ghcr.io/vexxhost/openstack-venv-builder:main@sha256:e8f8208d29a827f4f209909f7df22ea3995e74fd138c3b5d8ef90534d902b78e AS build
+FROM ghcr.io/vexxhost/openstack-venv-builder:main@sha256:9fbb1acf75178dce2934f73fbbe6c5d3e8c2191689251764da04172faa76cbf1 AS build
 RUN \
   --mount=type=bind,from=tempest,source=/,target=/src/tempest,readwrite \
   --mount=type=bind,from=barbican-tempest-plugin,source=/,target=/src/barbican-tempest-plugin,readwrite \
@@ -29,7 +29,7 @@ uv pip install \
         /src/octavia-tempest-plugin
 EOF
 
-FROM ghcr.io/vexxhost/python-base:main@sha256:e345015b48192ff920fe1484096dc21adbeb402f7e7255ced2eca786db248696
+FROM ghcr.io/vexxhost/python-base:main@sha256:a3028101248a25358d16549a4fdbf65826a5ebfd04d91a5e2da2f2b48b07ad68
 RUN \
     groupadd -g 42424 tempest && \
     useradd -u 42424 -g 42424 -M -d /var/lib/tempest -s /usr/sbin/nologin -c "Tempest User" tempest && \

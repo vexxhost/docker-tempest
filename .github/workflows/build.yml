@@ -33,7 +33,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: openstack/barbican-tempest-plugin
-          ref: f370cf0ee9e72ada0f48bf80360b7de851444b8e # master
+          ref: 19fbed83c1b29113d8beca14407e400f6ffadbd9 # master
 
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
